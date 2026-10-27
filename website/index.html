@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website di OpenStack</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#f3f5f9; color:#1f2937; }
+    header { background:#e0245e; color:#fff; padding:40px 20px; text-align:center; }
+    header h1 { margin:0 0 8px; }
+    main { max-width:720px; margin:24px auto; padding:0 16px; }
+    .card { background:#fff; border-radius:10px; padding:20px; margin-bottom:16px; box-shadow:0 1px 4px rgba(0,0,0,.1); }
+    table { width:100%; border-collapse:collapse; }
+    td { padding:8px 4px; border-bottom:1px solid #e5e7eb; }
+    td:first-child { font-weight:bold; width:40%; }
+    footer { text-align:center; color:#6b7280; padding:16px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Saya Berjalan di OpenStack</h1>
+    <p>Dideploy pada instance private cloud buatan sendiri</p>
+  </header>
+  <main>
+    <div class="card">
+      <h2>Tentang</h2>
+      <p>Halaman ini dilayani oleh web server Python http.server yang berjalan di dalam instance OpenStack, sebagai bukti bahwa cloud hasil instalasi DevStack dapat menjalankan aplikasi.</p>
+      <table>
+        <tr><td>Nama</td><td>Bram Naibaho</td></tr>
+        <tr><td>NIM</td><td>43324002</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h2>Infrastruktur</h2>
+      <table>
+        <tr><td>Platform cloud</td><td>OpenStack 2026.1 (DevStack)</td></tr>
+        <tr><td>Hypervisor</td><td>QEMU</td></tr>
+        <tr><td>Sistem operasi instance</td><td>Ubuntu 24.04 LTS</td></tr>
+        <tr><td>Web server</td><td>Python http.server</td></tr>
+        <tr><td>Alamat akses</td><td><span id="host"></span></td></tr>
+      </table>
+    </div>
+  </main>
+  <footer>Tugas OpenStack - dibuka pada <span id="waktu"></span></footer>
+  <script>
+    document.getElementById("host").textContent = location.host;
+    document.getElementById("waktu").textContent = new Date().toLocaleString("id-ID");
+  </script>
+</body>
+</html>
